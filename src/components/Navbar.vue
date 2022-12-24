@@ -1,21 +1,44 @@
 <template>
-  <div id="nav">
-    <Navbar/>
-  </div>
-  <router-view />
-  <Footer/>
+    <router-link class="logo-link" to="/">
+      <div class="logo">
+        <div class="logo-image">
+          <img class="miyaLogo" src="../assets/logo_size400.jpg" alt="" />
+        </div>
+        <div class="logo-slogan">Miya's porfolio</div>
+      </div>
+    </router-link>
+    <div class="navbar-main">
+      <router-link class="navbar-sub" @mouseover="showSubGraphic" @mouseleave="closeSubGraphic" to="/graphic">平面設計
+        <div class="navbar-graphic" :class="{ graphicIsShow }">
+          <div class="graphic-items" @mouseover="changeFirstColor" @mouseleave="returnFirstColor">
+            <router-link class="graphic-item layout" :class="{ isFirstActive }" to="/graphic/layout">平面排版</router-link>
+          </div>
+          <div class="graphic-items" @mouseover="changeSecondColor" @mouseleave="returnSecondColor">
+            <router-link class="graphic-item illustration" :class="{ isSecondActive }"
+              to="/graphic/illustration">電腦繪圖</router-link>
+          </div>
+        </div>
+      </router-link>
+
+      <router-link class="navbar-sub" @mouseover="showSubFront" @mouseleave="closeSubFront" to="/frontEnd">網頁前端
+        <div class="navbar-front" :class="{ frontIsShow }">
+          <div class="front-items" @mouseover="changeFirstColor" @mouseleave="returnFirstColor">
+            <router-link class="front-item design first-element" :class="{ isFirstActive }" @mouseover="changeColor"
+              @mouseleave="returnColor" to="/frontEnd/design">網頁設計</router-link>
+          </div>
+          <div class="front-items" @mouseover="changeSecondColor" @mouseleave="returnSecondColor">
+            <router-link class="front-item program second-element" :class="{ isSecondActive }" @mouseover="changeColor"
+              @mouseleave="returnColor" to="/frontEnd/program">前端程式</router-link>
+          </div>
+        </div>
+      </router-link>
+
+      <router-link class="navbar-sub" to="/about">About</router-link>
+    </div>
 </template>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Prosto+One");
-/* app */
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #336959;
-}
 
 /* navbar */
 #nav {
@@ -86,7 +109,8 @@
   border-color: #336959;
 }
 
-.isFirstActive, .isSecondActive {
+.isFirstActive,
+.isSecondActive {
   color: #42b983;
 }
 
@@ -114,9 +138,6 @@
 </style>
 
 <script>
-import Navbar from './components/Navbar.vue';
-import Footer from './components/Footer.vue';
-
 export default {
   data() {
     return {
@@ -127,10 +148,6 @@ export default {
       isFirstActive: false,
       isSecondActive: false,
     };
-  },
-  components: {
-    Navbar,
-    Footer
   },
   methods: {
     showSubGraphic() {
