@@ -8,6 +8,8 @@
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Prosto+One");
+
+
 /* app */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -159,4 +161,5 @@ export default {
     },
   },
 };
+
 </script>
