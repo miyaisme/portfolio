@@ -85,6 +85,7 @@
   width: 124px;
   height: 150px;
   background-color: white;
+  z-index: 1;
 }
 
 .graphic-items,
