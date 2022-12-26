@@ -9,7 +9,7 @@ import ToastService from 'primevue/toastservice'
 import Galleria from 'primevue/galleria'
 import Carousel from 'primevue/carousel'
 
-import "primevue/resources/themes/saga-green/theme.css";
+import "primevue/resources/themes/vela-green/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 
