@@ -12,6 +12,9 @@
       />
     </div>
     <div class="text">
+      <a href="mailto:a2602619@gmail.com" target="_blank">
+        <font-awesome-icon icon="fa-regular fa-envelope" />
+      </a>
       <h3 class="text-item">葉琳雅 | Miya.Yeh</h3>
       <span
         class="text-item"
@@ -54,3 +57,13 @@
   width: 100%;
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      url: 'a2602619@gmail.com'
+    }
+  }
+}
+</script>

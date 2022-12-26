@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">Design and program by Miya.Y.</div>
+  <div class="footer">Design and program by Miya.Y.<br>a2602619@gmail.com</div>
 </template>
 
 <style>
